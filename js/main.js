@@ -1,16 +1,21 @@
 function verifyEmail() {
 
-    const signedMail = ["personal.favia@gmail.com","mario.rossi@gmail.com","rosa.verdi@gmail.com"];
-    let userMail = document.getElementById("mailInput").value;
+    var check = false;
+    const signedMail = ["personal.favia@gmail.com", "mario.rossi@gmail.com", "rosa.verdi@gmail.com"];
+    var userMail = document.getElementById("mailInput").value;
 
     for (let i = 0; i < signedMail.length; i++) {
-        let verifiedEmail = signedMail[i];
+         let validMail = signedMail[i];
 
-        if (userMail == verifiedEmail) {
-            alert("ciao")
-            
-        } else{
-            alert("email non registrata")
+        if (userMail == validMail) {
+            check = true;
         }
-};
+    }
+
+    if (check) {
+        alert("mail presente");
+    }
+    else{
+        alert("mail non presente");
+    }
 };
